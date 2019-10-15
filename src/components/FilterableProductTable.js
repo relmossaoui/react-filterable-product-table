@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import SearchBar from './SearchBar';
 import ProductTable from './ProductTable'
 
@@ -27,7 +27,7 @@ export default class FilterableProductTable extends React.Component {
 
     render() {
         return (
-            <div>
+            <Fragment>
                 <SearchBar 
                     onChangeSearchBar={ this.onChangeSearchBar.bind(this) }
                     keyWord = { this.state.keyWord }
@@ -46,7 +46,7 @@ export default class FilterableProductTable extends React.Component {
                         stocked={ this.state.stocked }
                     />
                 </table>
-            </div>
+            </Fragment>
         )
     }
 }

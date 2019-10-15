@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import ProductRowCategory from './ProductRowCategory';
 import ProductRow from './ProductRow' 
@@ -13,20 +13,24 @@ export default function ProductTtable(props) {
     }, {})
 
     return (
-            Object.keys(products).map(category => {
-                return (
-                    <tbody key={category}>
-                      <ProductRowCategory  category={category} />
-                        { products[category].map(row => {
-                            return (
-                                <ProductRow 
-                                    key={row.name}
-                                    row={row} 
-                                    />
-                            )
-                        })}  
-                    </tbody>   
-                )
-            })   
+        <tbody>
+            {
+                Object.keys(products).map(category => {
+                    return (
+                        <Fragment key={category}>
+                          <ProductRowCategory  category={category} />
+                            { products[category].map(row => {
+                                return (
+                                    <ProductRow 
+                                        key={row.name}
+                                        row={row} 
+                                        />
+                                )
+                            })}  
+                        </Fragment>   
+                    )
+                })
+            }
+        </tbody>         
     )
 }
