@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.danger {
+  color: red;
+}
+
+table {
+  margin: 20px;
+}
+
+td {
+  padding: 5px;
+}
+
+.category-row {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#root {
+  width : 25%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  height: 500px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+} 
+
+.search-bar  > input:first-of-type {
+  width: 60%;
+  padding: 4px;
+  margin-bottom: 10px;
+}
